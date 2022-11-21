@@ -1,0 +1,12 @@
+package Day4Q4;
+
+public class Authormain {
+	public static void main(String []args)
+	{Author ob= new Author("aay","sasisil" , false);
+	Book obj=new Book(ob,"sid" , 10, 1000);
+	obj.getauth();
+	obj.toString();
+	
+	ob.getmail();
+	ob.getname();	}
+}

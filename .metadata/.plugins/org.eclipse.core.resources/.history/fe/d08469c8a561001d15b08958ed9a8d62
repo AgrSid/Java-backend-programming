@@ -1,0 +1,15 @@
+package Day4Q1;
+
+public class Checkingacc extends Account2 {
+int fee;
+public Checkingacc(int fee) {
+	super();
+	this.fee = fee;
+	
+}
+
+
+void deductfee(int f) {
+	totalbal-=f;
+}
+}

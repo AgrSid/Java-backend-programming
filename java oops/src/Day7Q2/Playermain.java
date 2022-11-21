@@ -1,0 +1,59 @@
+package Day7Q2;
+
+import java.util.ArrayList;
+
+import java.util.List;
+import java.util.ListIterator;
+
+public class Playermain {
+	public static void main(String[] args) {
+		List<Player> al = new ArrayList<Player>();
+		Player p1 = new Player("sid", 200, 4, 5, "Ind", 10, 'B');
+		Player p2 = new Player("ns", 400, 5, 4, "Ind", 5, 'B');
+		Player p3 = new Player("nath", 200, 3, 5, "Ind", 3, 'B');
+		Player p4 = new Player("sham", 27, 2, 1, "Ind", 1, 'C');
+		Player p5 = new Player("aas", 100, 2, 4, "Ind", 4, 'B');
+		al.add(p1);
+		al.add(p5);
+		al.add(p2);
+		al.add(p3);
+		al.add(p4);
+		for (Player player : al) {
+			System.out.println(player.getpName() +" : " + player.getTotalRun()+" : " + player.getNoOfWickets()+" : " + player.getCategory()+" : "
+					+ player.getCountry()+ " : " + player.getNoOfCentury() +" : "+ player.getNoOfMatches());  
+		}
+//		al.sort((o1,o2)->o1.getpName().compareTo(o2.getpName()));
+//		for (Player player : al) {
+//			System.out.println(player.getpName());}
+//		
+//       for(Player p:al) {
+//    	   
+//    	   if(p.getTotalRun()<100) {
+//    		   al.remove(p);
+//    		System.out.println(p.getpName());   
+//    	   }
+//		}
+//			
+		for(Player p:al) {
+			if(p.getNoOfCentury() == 10) {
+				p.setCategory('A');
+				System.out.println(p.getpName()+"  "+p.getCategory());
+				}
+		}
+	
+       
+		
+
+
+//		int max = al.get(0).getTotalRun();
+//
+//		for (int i = 0; i < al.size(); i++) {
+//			if (max < al.get(i).getTotalRun()) {
+//				max = al.get(i).getTotalRun();
+//			}
+//
+//		}
+//		System.out.print("Max value of run is " + max);
+
+	}
+}

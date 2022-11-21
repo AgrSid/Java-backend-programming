@@ -1,0 +1,28 @@
+package Day7Q5;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import Day7.Book;
+
+public class Bookmain {
+public static void main(String[] args) {
+	
+
+	HashMap <Integer,Book>hm=new HashMap<>();
+	  Book b1=new Book("Let us C",200,"Yashwant Kanetkar",8,"BPB");  
+	    Book b2=new Book("Data Communications and Networking",300,"Forouzan",6,"Mc Graw Hill");  
+	    Book b3=new Book("Operating System",400,"Galvin",5,"Wiley");  
+	    Book b4= new Book("wings of fire",350,"Apj abdul kalam",7,"NK");
+	    Book b5=new Book("two states",250,"chetan bhagat",7,"crowp");
+	    hm.put(1,b1);
+	    hm.put(2,b2);
+	    hm.put(3,b3);
+	    hm.put(4,b4);
+	    hm.put(5,b5);
+	    for (Map.Entry m:hm.entrySet()) {
+	    	System.out.println(m.getKey()+m.getValue());
+	    }
+
+}
+}

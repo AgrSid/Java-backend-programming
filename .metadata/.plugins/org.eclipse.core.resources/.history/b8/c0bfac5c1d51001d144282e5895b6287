@@ -1,0 +1,26 @@
+package employee;
+
+public class Constructor {
+
+	int id;
+	String name;
+	 
+	Constructor(){
+		id=101;
+		name="sid";
+		
+	}
+	Constructor(int id,String name){
+		this.id=id;
+		this.name=name;
+	}
+	void disp() {
+		System.out.println(id+name);
+	}
+	public static void main(String []args)
+	{
+		Constructor(102,sidd);
+		Constructor c= new Constructor();
+		c.disp();
+	}
+}

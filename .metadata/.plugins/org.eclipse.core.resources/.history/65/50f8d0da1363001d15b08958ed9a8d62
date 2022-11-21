@@ -1,0 +1,33 @@
+package Day6Q1;
+
+import java.util.Scanner;
+
+public class Bankmain {
+public static void main(String[] args) {
+Scanner s=new Scanner(System.in);
+int i=s.nextInt();	
+
+	switch (i){
+	case 1:
+		System.out.println("rupees");
+		break;
+	
+	case 2:
+		System.out.println("dollars");
+		break;
+	case 3:
+		System.out.println("pounds");
+	break;
+	}
+	
+	Bankacc c= new Bankacc(101,"sid" , 10000);
+	c.accid = 101;
+	c.sname="sid";
+	c.amount=1000;
+    c.dollars();
+    c.pounds();
+    c.rupees();
+}
+
+}
+

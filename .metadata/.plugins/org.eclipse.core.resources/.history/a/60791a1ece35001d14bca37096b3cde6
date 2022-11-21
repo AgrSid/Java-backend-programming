@@ -1,0 +1,26 @@
+package add1.java;
+
+public class Bill {
+	public static void main(String []args)
+	{
+		int n=150;
+		ele(n);
+	}
+	public static void ele(int k)
+	{
+		if(n<=100) {
+			System.out.println(n*1.2);
+		}
+		else if(100<n<200)
+		{System.out.println(n*1.2+(n-100)*2);
+	
+		}
+		else if(200<n<300)
+			System.out.println(n*1.2+(n-100)*2+(n-200)*3);
+		else(n>300)
+		System.out.println(n*1.2+(n-100)*2+(n-200)*3+(n-300)*5);
+	}
+	
+
+
+}

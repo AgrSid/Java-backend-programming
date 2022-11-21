@@ -1,0 +1,17 @@
+package add1.java;
+
+public class Righttriangle {
+public static void main(String []args) {
+	int i,j;
+	right(i,j);
+}
+	
+	public static void right(int a,int b) {
+	for (int a=1;a<4;a++) {
+		for(int b=1;b<=a;b++) {
+			System.out.print("*");
+			
+		}System.out.println(" ");
+	}
+}
+}

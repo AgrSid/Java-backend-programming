@@ -1,0 +1,19 @@
+package Day4Q1;
+
+import java.util.Scanner;
+
+public class Checkingacc extends Account2 {
+int fee;
+public Checkingacc(int fee, Scanner s) {
+	super();
+	this.fee = fee;
+	this.s = s;
+}
+Scanner s= new Scanner(System.in);
+void read(int f) {
+	fee=f;
+}
+void deductfee(int f) {
+	totalbal-=f;
+}
+}

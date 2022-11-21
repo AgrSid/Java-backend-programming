@@ -1,0 +1,15 @@
+package add1.java;
+
+public class Simpleinterest {
+public static void main(String[] args)
+{  
+	interest(p,r,t);
+}
+public static void interest(float p=1000,r=2,t=2){
+
+	float i;
+	i=p*r*t;
+	i=i/100;
+	System.out.println(i);
+}
+}

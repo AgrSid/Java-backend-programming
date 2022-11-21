@@ -1,0 +1,20 @@
+package Day4Q1;
+
+import java.util.Scanner;
+
+public class Accmain {
+	public  static void main(String args[]){  
+
+		Scanner s=new Scanner(System.in);
+		int accno=s.nextInt();
+	    float amount=s.nextFloat();
+	    int totalbal=s.nextInt();
+		Account2 c= new Account2(accno,amount,totalbal);
+		Checkings a= new Checkings(accno,amount,totalbal);
+
+a.deductfee();
+Savings b=new Savings(accno,amount,totalbal);
+
+b.add();
+}
+}

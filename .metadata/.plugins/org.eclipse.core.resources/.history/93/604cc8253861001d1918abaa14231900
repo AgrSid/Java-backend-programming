@@ -1,0 +1,5 @@
+package Day6Q3;
+
+public class InsufficientFundsException {
+
+}

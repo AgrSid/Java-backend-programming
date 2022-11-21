@@ -1,0 +1,10 @@
+package Day6Q3;
+
+public class InsufficientFunds extends Exception {
+public InsufficientFunds(String str) {
+	
+	super(str);
+	
+}
+
+}

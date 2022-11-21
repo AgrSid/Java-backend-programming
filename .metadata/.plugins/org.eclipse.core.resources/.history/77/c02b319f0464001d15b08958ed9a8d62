@@ -1,0 +1,29 @@
+package Day9;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Search {
+public static void main(String[] args) throws IOException {
+	File f=new File ("search.txt");
+	BufferedReader br=new BufferedReader(new FileReader(f));
+	String str = "sid";
+	String s;
+	String []words= null;
+	
+	try{while((s=br.readLine())!=null)
+		words=s.split(" ");}
+	catch(Exception e) {
+		e.printStackTrace();
+	}
+	for (String word:words)
+		{if(word.equals(str)) {
+			System.out.println("word found");}
+		else
+		    System.out.println("not found");
+		}
+	
+}
+}

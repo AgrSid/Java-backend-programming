@@ -1,0 +1,29 @@
+package add1.java;
+
+import java.util.Scanner;
+
+public class Emp {
+public static void maxSal(int []sal) {
+	int maxs=sal[0];
+	for(int i=0;i<sal.length;i++) {
+		if(sal[i]>maxs) {
+			maxs=sal[i];}
+		
+		}
+
+		System.out.println(maxs);
+	}
+
+public static void main(String []args) {
+	int [] sal=new int[5];
+    Scanner s = new Scanner(System.in);
+    
+    
+		System.out.println("enter sal");
+		for (int i=0;i<sal.length;i++)
+		{ sal[i]=s.nextInt();
+		
+		}
+		maxSal(sal);
+}
+}

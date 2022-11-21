@@ -1,0 +1,38 @@
+package Day4Q1;
+
+public class Account2 {
+ int accno;
+ float amount;
+ int totalbal;
+ void read(int acc,float amt,int tbal) {
+	 acc= accno;
+	 amt=amount;
+	 tbal=totalbal;
+			
+ }
+ void deposit(float amt) {
+	 amount=amt+amount;
+	 System.out.println(amt);
+			 
+ }
+ 
+ public int getAccno() {
+	return accno;
+}
+public void setAccno(int accno) {
+	this.accno = accno;
+}
+public float getAmount() {
+	return amount;
+}
+public void setAmount(float amount) {
+	this.amount = amount;
+}
+public int getTotalbal() {
+	return totalbal;
+}
+public void setTotalbal(int totalbal) {
+	this.totalbal = totalbal;
+}
+c
+}

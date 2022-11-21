@@ -1,0 +1,28 @@
+package add1.java;
+
+public class Bill {
+	public static void main(String []args)
+	{
+		int n=150;
+		ele(n);
+	}
+	public static double ele(int k)
+	{
+		if(k<=100) 
+			return (k*1.2);
+		
+		else if(k<200)
+		    return (k*1.2+(k-100)*2);
+	
+		
+		else if(k<300)
+			return (k*1.2+(k-100)*2+(k-200)*3);
+		
+		else if(k>300)
+		   return (k*1.2+(k-100)*2+(k-200)*3+(k-300)*5);
+	
+	return 0;
+	}
+
+
+}

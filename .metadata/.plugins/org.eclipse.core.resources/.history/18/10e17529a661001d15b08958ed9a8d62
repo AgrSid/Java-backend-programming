@@ -1,0 +1,14 @@
+package Day4Q1;
+
+public class Savingacc extends Account2{
+ double interestrate;
+ 
+	public Savingacc(double interestrate )
+	{   
+	
+		this.interestrate= interestrate;
+	}
+	public void add() {
+		totalbal*=interestrate;
+	}
+}

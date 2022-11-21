@@ -1,0 +1,12 @@
+package Day4Q1;
+
+public class Accmain {
+	public  static void main(String args[]){  
+Checkings a= new Checkings(0, 0, 0);
+
+a.deductfee();
+Savings b=new Savings(0, 0, 0);
+
+b.add();
+}
+}

@@ -1,0 +1,30 @@
+package add1.java;
+
+public abstract class Calculator {
+	public static void main(String []args) {
+		int n=2;
+		calc(n);
+	}
+	public static void calc(int k)
+	{int a = 10,b = 0,cal;
+		switch(k)
+		{case 1:
+			cal=a+b;
+			break;
+		case 2:
+			cal=a-b;
+			break;
+			
+		case 3:
+			cal=a*b;
+			break;
+			
+		case 4:
+			cal=a/b;
+			break;
+		}
+			
+	
+	}
+}
+

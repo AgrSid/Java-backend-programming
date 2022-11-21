@@ -1,0 +1,14 @@
+package add1.java;
+
+public class emp1 {
+	public static void maxSal(int []sal) {
+		int maxs=sal[0];
+		for(int i=0;i<sal.length;i++) {
+			if(sal[i]>maxs) {
+				maxs=sal[i];}
+			
+			}
+
+			System.out.println(maxs);
+		}
+}

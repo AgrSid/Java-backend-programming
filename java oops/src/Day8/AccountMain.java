@@ -1,0 +1,50 @@
+package Day8;
+
+	import java.util.Scanner;
+	import java.io.FileNotFoundException;
+	import java.io.IOException;
+	import java.util.ArrayList;
+	public class AccountMain
+	{
+	 public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException
+	 {
+	  boolean flag=true;
+	  Scanner sc=new Scanner(System.in);
+	  AccountManagement am=new AccountManagement();
+	  ArrayList<Account> al=new ArrayList<>();
+	  while(flag)
+	  {
+	   System.out.println("Menu \n1.INSERT\r\n2.DISPLAY\r\n3.FIND EMI\r\n4.SEARCH AGRI LOAN\r\n5.SEARCH HOME AND PER\r\n6.EXIT");
+	   System.out.println("Enter your choice:");
+	   switch(sc.nextInt())
+	   {
+	   case 1:
+	    al=am.insertAccount(al);
+	   break;
+	   case 2:
+	       am.displayAccount(al);
+	   break;
+	   case 3:
+	    am.findEMI(al);
+	   break;
+	   case 4:
+	     am.searchLoan(al);
+	   break;
+	   case 5:
+	    am.searchHome(al);
+	   break;
+	   case 6:
+	     flag=false;
+	     sc.close();
+	     System.out.println("****** Application terminated *******");
+	      break;
+	      default:
+	       System.out.println("Invalid Option!!!!!");
+	      break;
+	   }
+	  }
+
+	 }
+
+	}
+

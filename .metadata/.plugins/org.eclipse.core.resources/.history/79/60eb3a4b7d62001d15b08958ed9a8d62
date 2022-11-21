@@ -1,0 +1,47 @@
+package Day7Q2;
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+public class Playermain {
+	public static void main(String[] args) {
+		List<Player> al = new ArrayList<Player>();
+		Player p1 = new Player("sid", 200, 4, 5, "Ind", 2, 'A');
+		Player p2 = new Player("ns", 400, 5, 4, "Ind", 5, 'A');
+		Player p3 = new Player("nath", 200, 3, 5, "Ind", 3, 'B');
+		Player p4 = new Player("sham", 27, 2, 1, "Ind", 2, 'C');
+		Player p5 = new Player("aas", 100, 2, 4, "Ind", 4, 'B');
+		al.add(p1);
+		al.add(p5);
+		al.add(p2);
+		al.add(p3);
+		al.add(p4);
+		for (Player player : al) {
+			System.out.println(player.getpName() +" : " + player.getTotalRun()+" : " + player.getNoOfWickets()+" : " + player.getCategory()+" : "
+					+ player.getCountry()+ " : " + player.getNoOfCentury() +" : "+ player.getNoOfMatches());  
+		}
+//		al.sort((o1,o2)->o1.getpName().compareTo(o2.getpName()));
+//		for (Player player : al) {
+//			System.out.println(player.getpName());}
+//		
+        for (int i = 0; i < al.size(); i++) {
+			if(al.get(0).getTotalRun()<100) {
+				System.out.println(al.get(0).getpName());
+			}
+			}
+		
+
+
+//		int max = al.get(0).getTotalRun();
+//
+//		for (int i = 0; i < al.size(); i++) {
+//			if (max < al.get(i).getTotalRun()) {
+//				max = al.get(i).getTotalRun();
+//			}
+//
+//		}
+//		System.out.print("Max value of run is " + max);
+
+	}
+}

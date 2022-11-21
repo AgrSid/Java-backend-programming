@@ -1,0 +1,27 @@
+
+
+
+package Day6Q3;
+import Day6Q3.InsufficientFundsException;
+public class CheckingAccount {
+	static int balance=1300;
+	static int deduction=1500;
+	
+static void withdraw() throws InsufficientFundsException{
+	try {
+		balance=-deduction;
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	throw new InsufficientFundsException("no funds available");
+	
+}
+int getbalance(){	
+	return balance;
+
+}
+public static void main(String[] args) throws InsufficientFundsException {
+	withdraw();
+	
+}
+}

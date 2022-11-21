@@ -1,0 +1,50 @@
+package employee;
+
+import java.util.Scanner;
+
+public class Electricitybill {
+int customerno;
+String cname;
+float unit;
+
+
+ public  void readData() {
+	Scanner s=new Scanner (System.in);
+	customerno =s.nextInt();
+	cname=s.next();
+	unit=s.nextFloat();
+
+}
+ public void dataDisplay() {
+	 System.out.println(customerno);
+	 System.out.println(cname);
+	 System.out.println(unit);
+	
+	
+
+	System.out.println(bill);
+ }
+ public void computebill() {
+	 if (unit<=100)
+			 {
+			 }
+	 else if (unit <=300)
+	 {
+	 }
+	 else if (unit<=600)
+	 {
+	 }
+	 else 
+	 {
+		 
+	 }
+	 }
+ 
+public static void main(String []args)
+{
+	Electricitybill e=new Electricitybill();
+	e.readData();
+	e.dataDisplay();
+	e.computebill();
+}
+}

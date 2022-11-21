@@ -1,0 +1,23 @@
+package Day7Q5;
+
+import java.util.HashMap;
+
+public class Bookmgmt {
+	public static HashMap<Integer,Book> createHashMapBook()
+	{
+		
+    HashMap<Integer,Book> hm = new HashMap<>();
+	Book b1 = new Book("SOM",450,"Punmia", 807,"TMH");
+	Book b2 = new Book("SA",350,"Gupta", 707,"Khanna");
+	Book b3 = new Book("TE",550,"Khanna", 617,"Laxmi");
+	Book b4 = new Book("EVS",850,"Jain", 548,"Elesvier");
+	
+	hm.put(1001,b1);
+	hm.put(1002,b2);
+	hm.put(1003,b3);
+	hm.put(1004,b4);
+ 
+	return hm;
+   }
+	
+}

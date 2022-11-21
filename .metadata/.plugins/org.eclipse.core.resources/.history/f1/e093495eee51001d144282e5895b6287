@@ -1,0 +1,10 @@
+package employee;
+
+public class Accmain {
+	public  static void main(String args[]){  
+Checkingacc a= new Checkingacc();
+a.read(10);
+a.deductfee(20);
+
+}
+}

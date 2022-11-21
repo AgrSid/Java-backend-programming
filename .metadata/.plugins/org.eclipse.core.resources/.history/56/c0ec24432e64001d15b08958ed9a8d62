@@ -1,0 +1,39 @@
+package Day9;
+
+import java.io.BufferedReader;
+import java.io.Closeable;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Q1{
+	
+
+	public static void main(String[] args) throws   IOException,FileNotFoundException 
+	   {
+	    File f=new File("dac.txt");
+		BufferedReader bs= new BufferedReader(new FileReader(f));
+	   int linecount=0;
+	   int wordcount=0;
+	   int charcount=0;
+	     String str=bs.readLine();
+	     while(str!=null)
+	     {	 linecount++;
+	     String [] a=str.split(" ");
+	     wordcount+=a.length;
+	     for (String al:a)
+	    	 charcount+=al.length();	
+	     }
+	     str=bs.readLine();
+	   
+	System.out.println(linecount);
+	System.out.println(wordcount);
+	System.out.println(charcount);
+    bs.close();
+ 
+
+	   }
+
+
+}

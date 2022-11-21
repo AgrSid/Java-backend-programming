@@ -1,0 +1,34 @@
+package employee;
+
+public class Account2 {
+ int accno;
+ float amount;
+ int totalbal;
+ void read(int acc,float amt,int tbal) {
+	 acc= accno;
+	 amt=amount;
+	 tbal=totalbal;
+			
+ }
+ void deposit(float amt) {
+	 amount=amt+amount;
+	 System.out.println(amt);
+			 
+ }
+
+ void withdraw(float amt) {
+	 if(amount<amt) {
+		 System.out.println("insufficient bal");
+	 }
+	 else {
+		 amount-=amt;
+		 System.out.println(amt);
+	 }
+ }
+ 
+ void getbal() {
+	 System.out.println(amount);
+	 
+	 
+ }
+}

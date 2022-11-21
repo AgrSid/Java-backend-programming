@@ -1,0 +1,159 @@
+package Day8;
+
+        import java.io.File;
+		import java.io.FileInputStream;
+		import java.io.FileNotFoundException;
+		import java.io.FileOutputStream;
+		import java.io.IOException;
+		import java.io.ObjectInputStream;
+		import java.io.ObjectOutputStream;
+		import java.util.ArrayList;
+		import java.util.Scanner;
+		public class AccountManagement 
+		{
+		   Scanner sc=new Scanner(System.in);
+		   Account a;
+		   File account=new File("C:\\Users\\Dell\\Desktop\\account.txt");
+		   ObjectOutputStream oos;
+		   ObjectInputStream ois;
+		 public ArrayList<Account> insertAccount(ArrayList<Account> al) throws FileNotFoundException, IOException
+		 {
+		  System.out.println("How many accounts you want to add ?");
+		  int n=sc.nextInt();
+		  for(int i=0;i<n;i++)
+		  {
+		   System.out.print("Enter account number:");
+		   int acc_num=sc.nextInt();
+		   System.out.print("Enter custmor name:");
+		   String cus_name=sc.next();
+		   System.out.print("Enter custmor address:");
+		   String address=sc.next();
+		   System.out.print("Enter customer type:");
+		   String cus_type=sc.next();
+		   System.out.print("Enter Loan amount:");
+		   double loan_amt=sc.nextDouble();
+		   System.out.print("Enter interest rate per annual:");
+		   double intrst_rt=sc.nextDouble();
+		   System.out.print("Enter term:");
+		   int term=sc.nextInt();
+		   System.out.print("Enter loan type:");
+		   String loan_type=sc.next();
+		   a=new Account(acc_num,cus_name,address,cus_type,term,loan_amt,intrst_rt,loan_type);
+		   al.add(a);
+		  }
+		   oos=new ObjectOutputStream(new FileOutputStream("C:\\Users\\Dell\\Desktop\\account.txt"));
+		   oos.writeObject(al);
+		   oos.close();
+		  return al;
+		 }
+
+		 @SuppressWarnings("unchecked")
+		 public void displayAccount(ArrayList<Account> al) throws FileNotFoundException, IOException, ClassNotFoundException
+		 {
+		  if(account.isFile())
+		  {
+		   ois=new ObjectInputStream(new FileInputStream("C:\\Users\\Dell\\Desktop\\account.txt"));
+		   al=(ArrayList<Account>)ois.readObject();
+		   ois.close();
+		   System.out.println("----------------------------------------------------------------------------------");
+		   for(Account a: al)
+		   {
+		    //a.disp();
+		    String am=a.toString();
+		    System.out.println(am);
+		   }
+		   System.out.println("----------------------------------------------------------------------------------");
+		  }else
+		    {
+		     System.out.println("File does not exists!!!!");
+		    }
+		 }
+
+		 
+
+
+		 @SuppressWarnings("unchecked")
+		 public void findEMI(ArrayList<Account> al) throws FileNotFoundException, IOException, ClassNotFoundException
+		 {
+		  if(account.isFile())
+		  {
+		   ois=new ObjectInputStream(new FileInputStream(account));
+		   al=(ArrayList<Account>)ois.readObject();
+		   ois.close();
+		   System.out.println("Enter account number to find Emi:");
+		   int acc_nu=sc.nextInt();
+		   for(Account a: al)
+		   {
+		    if(a.acc_num==acc_nu)
+		    {
+		     double Emi=(a.loan_amt+a.loan_amt*a.intrst_rt)/a.term;
+		      String am=a.toString();
+		      System.out.println("----------------------------------------------------------------------------------");
+		      System.out.println(am+" ,EMI:"+Emi);
+		      System.out.println("----------------------------------------------------------------------------------");
+		    }
+		   }
+		   }else
+		   {
+		    System.out.println("File does not exists!!!!");
+		   }
+		 }
+
+		 @SuppressWarnings("unchecked")
+		 public void searchLoan(ArrayList<Account> al) throws FileNotFoundException, IOException, ClassNotFoundException
+		 {
+		   if(account.isFile())
+		   {
+		      ois=new ObjectInputStream(new FileInputStream(account));
+		   al=(ArrayList<Account>)ois.readObject();
+		   ois.close();
+		  for(Account a:al)
+		  {
+		   if(a.loan_type.equalsIgnoreCase("agri"))
+		   {
+		    System.out.println("----------------------------------------------------------------------------------");
+		    String am=a.toString();
+		    System.out.println(am);
+		    System.out.println("----------------------------------------------------------------------------------");
+		   }
+		  }
+		   }else
+		   {
+		    System.out.println("File does not exists!!!!");
+
+	
+		}
+		 }
+		 
+		 @SuppressWarnings("unchecked")
+		 public void searchHome(ArrayList<Account> al) throws FileNotFoundException, IOException,ClassNotFoundException
+		 {
+		  if(account.isFile())
+		  { 
+		   ois=new ObjectInputStream(new FileInputStream(account));
+		    al=(ArrayList<Account>)ois.readObject();
+		    ois.close();
+		    System.out.println("----------------------------------------------------------------------------------");
+		   for(Account a:al)
+		   {
+		    
+		    if(a.loan_type.equalsIgnoreCase("home"))
+		    {
+		     String am=a.toString();
+		     System.out.println(am);
+		    }else
+		    if(a.loan_type.equalsIgnoreCase("personal"))
+		    {
+		     String am=a.toString();
+		     System.out.println(am);
+		    }
+		   }
+		   System.out.println("----------------------------------------------------------------------------------");
+		  }else
+		    {
+		     System.out.println("File does not exists!!!!");
+		    }
+		 }
+
+		}
+

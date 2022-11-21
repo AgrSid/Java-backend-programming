@@ -1,0 +1,14 @@
+package Day7Q5;
+
+
+import java.util.HashMap;
+
+public class Bookmain {
+public static void main(String[] args) {
+	
+
+	HashMap <Integer,Book>hm=new HashMap<>();
+	  hm=Bookmgmt.createHashMapBook();
+	  Bookmgmt.display(hm);
+	  Bookmgmt.dispkey(hm);
+}

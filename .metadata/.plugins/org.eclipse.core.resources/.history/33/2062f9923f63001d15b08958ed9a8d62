@@ -1,0 +1,76 @@
+package Day7;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import Day4.Book;
+import employee.Emp;
+
+public class ALobjmain {
+
+public static  void main(String[] args) {
+	ArrayList<String> al= new ArrayList<>();
+	for (Emp e:al)
+		   System.out.println(e);
+	
+//	al.add("sid");
+//	al.add("nath");
+//	al.add("ns");
+//	for (String e:al)
+//	   System.out.println(e);
+//	System.out.println(al.get(1));
+//	al.set(1, "aayu");
+//	
+	Collections.sort ((List<T>) al);
+	for (Emp e:al)
+	   System.out.println(e);
+//	ListIterator<String> li=al.listIterator(al.size());
+//	
+//	while( li.hasPrevious())
+//	{	String str=li.previous();
+//	System.out.println(str);
+//	}
+//	al.forEach(a->
+//	System.out.println(a)
+//	);
+//	ArrayList <Emp> e= new ArrayList<>();
+//	Emp e1= new Emp(101,"sfd",46);
+//	
+	
+	//	}	{if (e.ssn==ss)
+//		{
+//		e.name=nam;}
+//		
+//	}
+//	for (Emp e:al)
+//		e.displayEmp();
+//	
+	
+	
+	
+	
+// Iterator<Integer> it= al.iterator();
+//while(it.hasNext()) {
+//
+//	System.out.println( it.next()); 
+//}
+
+
+
+//	for(Emp e: al){
+//	
+//		{
+//			 al.remove(0);
+//	      }
+//	}
+//	System.out.println(al);
+//
+//	
+//	for (Emp e:al)
+//		e.displayEmp();
+//	
+//	
+}
+}
+

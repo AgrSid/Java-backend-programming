@@ -1,0 +1,16 @@
+
+public class EmployeeDao {
+public int registerdemo(Employee emp) {
+	String q="insert into employee(firstName,lastName,username,password,address) values (?,?,?,?,?)";
+    Class.forName("com.mysql.jdbc.Driver");
+
+    try (Connection connection = DriverManager
+        .getConnection("jdbc:mysql://localhost:3306/employee", "root", "root123");
+}
+}
+firstName;
+private String lastName;
+private String username;
+private String password;
+private String address;
+private String conta
