@@ -1,0 +1,9 @@
+Q1 find 3rd highest salary
+SELECT basicpay  
+FROM 
+    (SELECT basicpay 
+     FROM emp
+     ORDER BY basicpay DESC 
+     LIMIT 3)
+order by basicpay
+LIMIT 1;
