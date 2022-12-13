@@ -9,5 +9,13 @@ order by basicpay
 LIMIT 1;
 
 
+SELECT basicpay
+FROM emp 
+ORDER BY basicpay DESC 
+LIMIT 2, 1
+
+
+
+
 Q2List the employees who are working directly under superior most employee of the office. (Assume the superior most employee is the employee who does not have a supervisor)
  select * from emp where supcode in (select  empcode  from emp where supcode is null);
